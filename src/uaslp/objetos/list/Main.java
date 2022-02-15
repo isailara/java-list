@@ -1,5 +1,7 @@
 package uaslp.objetos.list;
 
+import uaslp.objetos.list.linkedlist.LinkedList;
+
 public class Main {
 
     public static void main(String[] args) {
