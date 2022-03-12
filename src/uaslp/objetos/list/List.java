@@ -1,6 +1,6 @@
 package uaslp.objetos.list;
 
-public interface List {
+public interface List{
 
     void addAtTail(String data);
     void addAtFront(String data);
