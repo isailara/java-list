@@ -2,14 +2,14 @@ package uaslp.objetos.list.linkedlist;
 
 import uaslp.objetos.list.List;
 
-public class LinkedList implements List {
-    private Node head;
-    private Node tail;
+public class LinkedList<T> implements List<T> {
+    private Node<T> head;
+    private Node<T> tail;
     private int size;
 
     @Override
-    public void addAtTail(String data){
-        Node node=new Node(data);
+    public void addAtTail(T data){
+        Node<T> node=new Node<>(data);
 
         //node.data=data;
 
@@ -26,8 +26,8 @@ public class LinkedList implements List {
     }
 
     @Override
-    public void addAtFront(String data){
-        Node node = new Node(data);
+    public void addAtFront(T data){
+        Node<T> node = new Node<>(data);
 
         if (size == 0) {
             tail = node;
@@ -42,7 +42,7 @@ public class LinkedList implements List {
 
     @Override
     public void remove(int index){
-        Node node = findNode(index);
+        Node<T> node = findNode(index);
 
         if(node == null){
             return;
@@ -76,27 +76,27 @@ public class LinkedList implements List {
     }
 
     @Override
-    public String getAt(int index){
-        Node node = findNode(index);
+    public T getAt(int index){
+        Node<T> node = findNode(index);
 
         return node == null ? null : node.data;
     }
 
     @Override
-    public void setAt(int index,String data){
-        Node node = findNode(index);
+    public void setAt(int index,T data){
+        Node<T> node = findNode(index);
 
         if(node != null){
             node.data = data;
         }
     }
 
-    private Node findNode(int index){
+    private Node<T> findNode(int index){
         if(index < 0 || index >= size){
             return null;
         }
 
-        Node node = head;
+        Node<T> node = head;
         int currentIndex = 0;
 
         while (currentIndex != index) {
@@ -108,7 +108,7 @@ public class LinkedList implements List {
     }
 
     /*
-    public void removeAllWithValue(String data){
+    public void removeAllWithValue(T data){
 
     }*/
 
@@ -118,8 +118,8 @@ public class LinkedList implements List {
     }
 
     @Override
-    public LinkedListIterator getIterator(){
+    public LinkedListIterator<T> getIterator(){
         //return  null;
-        return new LinkedListIterator(head);
+        return new LinkedListIterator<>(head);
     }
 }

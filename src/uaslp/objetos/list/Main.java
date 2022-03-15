@@ -8,19 +8,19 @@ public class Main {
     public static void main(String[] args)
     {
         // write your code here
-        List team1 = new ArrayList();
-        List team2 = new ArrayList();
-        List team3 = new ArrayList();
+        List<String> team1 = new ArrayList<>();
+        List<String> team2 = new ArrayList<>();
+        List<String> team3 = new ArrayList<>();
 
-        List team4 = new LinkedList();
-        List team5 = new LinkedList();
-        List team6 = new LinkedList();
+        List<String> team4 = new LinkedList<>();
+        List<String> team5 = new LinkedList<>();
+        List<String> team6 = new LinkedList<>();
 
         exercise(team1,team2,team3);
         exercise2(team4,team5,team6);
     }
 
-    public static void exercise(List team1, List team2, List team3)
+    public static void exercise(List<String> team1, List<String> team2, List<String> team3)
     {
         System.out.println();
         System.out.println("---------------------ArrayList---------------------");
@@ -36,7 +36,7 @@ public class Main {
 
         team3.addAtFront("Imelda");
 
-        Iterator iterator;
+        Iterator<String> iterator;
 
         iterator = team1.getIterator();
 
@@ -130,7 +130,7 @@ public class Main {
         }
     }
 
-    public static void exercise2(List team4, List team5, List team6)
+    public static void exercise2(List<String> team4, List<String> team5, List<String> team6)
     {
         System.out.println();
         System.out.println("---------------------LinkedList---------------------");
@@ -146,7 +146,7 @@ public class Main {
 
         team6.addAtFront("Alejandra");
 
-        Iterator iterator;
+        Iterator<String> iterator;
 
         iterator = team4.getIterator();
 
