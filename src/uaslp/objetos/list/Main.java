@@ -5,8 +5,6 @@ import uaslp.objetos.list.linkedlist.LinkedList;
 import uaslp.objetos.list.exception.NotNullValuesAllowedException;
 import uaslp.objetos.list.exception.NotValidIndexException;
 
-import java.sql.SQLOutput;
-
 public class Main {
 
     public static void main(String[] args)
@@ -37,6 +35,7 @@ public class Main {
 
     public static void exercise(List<String> team1, List<String> team2, List<String> team3)  throws NotValidIndexException, NotNullValuesAllowedException
     {
+        //team1.remove(1);
         team1.addAtTail(null);
 
         team1.addAtTail("Jesús");
