@@ -9,19 +9,14 @@ public class ArrayListTest {
     @Test
     public void givenASizeOfNewList_whenGetSize_thenResultIsZero() {
         //Given:
-        ArrayList<String> array=new ArrayList<>(3);
+        ArrayList<String> array=new ArrayList<>(0);
 
         //When:
-        array.addAtFront("Hola");
-        array.addAtFront("Help me");
-        array.addAtFront("Please ");
 
         int sizeOfList = array.getSize();
 
-        System.out.println("Tam: "+sizeOfList);
-
         //Then:
-        Assertions.assertEquals(3, sizeOfList, "Size of list after creation must be zero."); //Valida que el tamaño sea 1
+        Assertions.assertEquals(0, sizeOfList, "Size of list after creation must be zero."); //Valida que el tamaño sea 1
     }
 
 
