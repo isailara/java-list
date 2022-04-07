@@ -7,16 +7,22 @@ import uaslp.objetos.list.Iterator;
 public class ArrayListTest {
 
     @Test
-    public void givenASizeOfNewList_whenGetSize_thenResultIsZero() {
+    public void givenASizeOfNewList_whenGetSize_thenResultIsThree() {
         //Given:
-        ArrayList<String> array=new ArrayList<>(0);
+        ArrayList<String> array=new ArrayList<>(2);
+
+        array.addAtFront("Hola");
+        array.addAtFront("Adios");
 
         //When:
-
+        array.addAtFront("Help");
         int sizeOfList = array.getSize();
 
         //Then:
-        Assertions.assertEquals(0, sizeOfList, "Size of list after creation must be zero."); //Valida que el tamaño sea 1
+        Assertions.assertEquals(3, sizeOfList, "Expected size of 3."); //Valida que el tamaño sea 3
+        Assertions.assertEquals(array.getAt(0),"Help");
+        Assertions.assertEquals(array.getAt(1),"Adios");
+        Assertions.assertEquals(array.getAt(2),"Hola");
     }
 
 
