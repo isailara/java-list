@@ -81,7 +81,12 @@ public class ArrayList<T> implements List<T> {
     }
 
     @Override
-    public void setAt(int index,T data){
+    public void setAt(int index,T data) throws NotNullValuesAllowedException {
+
+        if(data == null){
+            throw new NotNullValuesAllowedException();
+        }
+
         if(index >= 0 && index < size)
         {
             array[index]=data;
