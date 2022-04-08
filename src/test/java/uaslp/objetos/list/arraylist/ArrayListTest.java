@@ -3,11 +3,12 @@ package uaslp.objetos.list.arraylist;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import uaslp.objetos.list.Iterator;
+import uaslp.objetos.list.exception.NotNullValuesAllowedException;
 
 public class ArrayListTest {
 
     @Test
-    public void givenASizeOfNewList_whenGetSize_thenResultIsThree() {
+    public void givenASizeOfNewList_whenGetSize_thenResultIsThree() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array=new ArrayList<>(2);
 
@@ -39,7 +40,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenANewList_whenAddAtFront_thenSizeIsOne() {
+    public void givenANewList_whenAddAtFront_thenSizeIsOne() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>();
 
@@ -54,7 +55,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithOneElement_whenAddAtFront_thenSizeIsTwo() {
+    public void givenAListWithOneElement_whenAddAtFront_thenSizeIsTwo() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>();
 
@@ -72,7 +73,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenANewList_whenAddAtTail_thenSizeIsOne() {
+    public void givenANewList_whenAddAtTail_thenSizeIsOne() throws NotNullValuesAllowedException {
         //Given:
         ArrayList<String> array = new ArrayList<>();
 
@@ -87,7 +88,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithOneElement_whenAddAtTail_thenSizeIsTwo() {
+    public void givenAListWithOneElement_whenAddAtTail_thenSizeIsTwo() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>();
 
@@ -105,7 +106,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithOneElement_whenRemove_thenSizeIsZero(){
+    public void givenAListWithOneElement_whenRemove_thenSizeIsZero() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>();
         array.addAtFront("Hola");
@@ -120,7 +121,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithTwoElements_whenRemove_thenSizeIsOne(){
+    public void givenAListWithTwoElements_whenRemove_thenSizeIsOne() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>();
         array.addAtFront("Hola");
@@ -138,7 +139,7 @@ public class ArrayListTest {
 
 
     @Test
-    public void givenAListWithTwoElements_whenRemoveIndex1_thenSizeIsOne(){
+    public void givenAListWithTwoElements_whenRemoveIndex1_thenSizeIsOne() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>(); //Crea un objeto de la lista
         array.addAtFront("Hola");
@@ -155,7 +156,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithThreeElements_whenRemoveIndex1_thenSizeIsTwo(){
+    public void givenAListWithThreeElements_whenRemoveIndex1_thenSizeIsTwo() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>(); //Crea un objeto de la lista
 
@@ -175,7 +176,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithThreeElements_whenRemoveElementAtTail_thenSizeIsTwo(){
+    public void givenAListWithThreeElements_whenRemoveElementAtTail_thenSizeIsTwo() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>(); //Crea un objeto de la lista
 
@@ -195,7 +196,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithThreeElements_whenRemoveAll_thenSizeIsZero(){
+    public void givenAListWithThreeElements_whenRemoveAll_thenSizeIsZero() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>(); //Crea un objeto de la lista
 
@@ -213,7 +214,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithTwoElements_whenSetAt_thenElementIsModified(){
+    public void givenAListWithTwoElements_whenSetAt_thenElementIsModified() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>(); //Crea un objeto de la lista
 
@@ -232,7 +233,7 @@ public class ArrayListTest {
     }
 
     @Test
-    public void givenAListWithThreeElements_whenGetIterator_thenIteratorWorksOverThreeElements(){
+    public void givenAListWithThreeElements_whenGetIterator_thenIteratorWorksOverThreeElements() throws NotNullValuesAllowedException{
         //Given:
         ArrayList<String> array = new ArrayList<>(); //Crea un objeto de la lista
 

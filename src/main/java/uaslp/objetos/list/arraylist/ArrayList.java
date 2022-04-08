@@ -2,6 +2,8 @@ package uaslp.objetos.list.arraylist;
 
 import uaslp.objetos.list.Iterator;
 import uaslp.objetos.list.List;
+import uaslp.objetos.list.exception.NotNullValuesAllowedException;
+import uaslp.objetos.list.exception.NotValidIndexException;
 
 public class ArrayList<T> implements List<T> {
     private  static final int DEFAULT_SIZE = 2;
@@ -17,7 +19,12 @@ public class ArrayList<T> implements List<T> {
     }
 
     @Override
-    public void addAtTail(T data){
+    public void addAtTail(T data) throws NotNullValuesAllowedException{
+
+        if(data == null){
+            throw new NotNullValuesAllowedException();
+        }
+
         if(size == array.length){
             increaseArrayList();
         }
@@ -27,7 +34,12 @@ public class ArrayList<T> implements List<T> {
     }
 
     @Override
-    public void addAtFront(T data){
+    public void addAtFront(T data) throws NotNullValuesAllowedException{
+
+        if(data == null){
+            throw new NotNullValuesAllowedException();
+        }
+
         if(size == array.length){
             increaseArrayList();
         }
